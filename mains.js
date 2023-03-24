@@ -12,6 +12,4 @@ fetch(url + fullN)
   .then(res=>console.log(res));  
   });
 };
-if(window.location.href == window.location.host){
 getPostData();
-};
