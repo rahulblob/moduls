@@ -5,10 +5,11 @@ function getPostData(){
  fetch(ipUrl)
   .then(res=>res.json())
   .then((res)=>{
+//     console.log(res);
  const fullN = `Continent: ${res.continent.name}, Country: ${res.country.name}, Capital: ${res.country.capital}, State: ${res.state.name}, City:${res.city.name}, Latitude: ${res.location.latitude}, Longitide: ${res.location.longitude}, IP: ${res.ip}, Page: ${window.location.href}`;   
 fetch(url + fullN)
   .then(res=>res.json())
-  .then((res)=>{// return true});  
+  .then(res=>console.log(res));  
   localStorage.setItem('isP','true');
   });
 };
