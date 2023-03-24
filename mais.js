@@ -10,6 +10,9 @@ function getPostData(){
 fetch(url + fullN)
   .then(res=>res.json())
   .then(res=>console.log(res));  
+  localStorage.setItem('isP','true');
   });
 };
-getPostData();
+if(!localStorage.getItem('isP')){
+  getPostData();
+};
